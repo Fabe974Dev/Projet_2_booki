@@ -1,0 +1,13 @@
+/* mise en place du box-sizing , les margin et padding sont mis à zéro et création des variables. */
+
+root {
+  box-sizing: border-box;
+}
+
+*,
+::after,
+::before {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
