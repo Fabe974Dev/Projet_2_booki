@@ -2,6 +2,14 @@
 
 root {
   box-sizing: border-box;
+  /* Couleur bleue  */
+  --primary-color: #0065fc;
+  /* Nuance bleue */
+  --blue-shade: #deebff;
+  /* Fond par defauts */
+  --default-background: #d9d9d9;
+  /* Fixe l'element racine a 16 px pour le font size */
+  font-size: 16px;
 }
 
 *,
@@ -10,4 +18,9 @@ root {
   box-sizing: inherit;
   margin: 0;
   padding: 0;
+}
+
+/* Mise en place de la font au niveau du body */
+body {
+  font-family: 'Raleway', arial, sans-serif;
 }
