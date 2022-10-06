@@ -1,26 +1,162 @@
-/* mise en place du box-sizing , les margin et padding sont mis à zéro et création des variables. */
+ /* mise en place du box-sizing ,création des variables fixation de la taille des fonts  */
 
-root {
-  box-sizing: border-box;
-  /* Couleur bleue  */
-  --primary-color: #0065fc;
-  /* Nuance bleue */
-  --blue-shade: #deebff;
-  /* Fond par defauts */
-  --default-background: #d9d9d9;
-  /* Fixe l'element racine a 16 px pour le font size */
-  font-size: 16px;
-}
+ :root {
+   box-sizing: border-box;
+   --primary: #0065fc;
+   --shade-blue: #DEEBFF;
+   --default-bg: #d9d9d9;
+   font-size: 62.5%;
+   /* Obtenu avec un petit calcule (default 16px * 62.5 / 100 = 10)équivalence "10px" sur l'élément racine */
+ }
 
-*,
-::after,
-::before {
-  box-sizing: inherit;
-  margin: 0;
-  padding: 0;
-}
+ /* les margin et padding sont mis à zéro */
 
-/* Mise en place de la font au niveau du body */
-body {
-  font-family: 'Raleway', arial, sans-serif;
-}
+ *,
+ ::before,
+ ::after {
+   box-sizing: inherit;
+   margin: 0;
+   padding: 0;
+ }
+
+ /* Mise en place de la font au niveau du body */
+
+ body {
+   font-family: 'Raleway', arial, sans-serif;
+ }
+
+
+ /* Dimensionnement de la taille de ma page */
+
+ #wrapper {
+   width: 100%;
+   max-width: 1400px;
+   margin: 0 auto;
+ }
+
+ /* Mise en place du Header */
+
+ .header-box {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   width: 100%;
+   height: 105px;
+ }
+
+ /* Mise en place du logo */
+
+ .header-logo {
+   padding: 0 50px;
+ }
+
+ .box-logo {
+   width: 62px;
+   height: 20px;
+ }
+
+ .logo {
+   width: 100%;
+ }
+
+ /* Mis en place de la barre de navigation. */
+
+ .header-nav ul {
+   display: flex;
+   list-style-type: none;
+ }
+
+ /* Mis en place des liens de navigation. */
+
+ .nav-header-links {
+   color: #000;
+   font-style: normal;
+   font-weight: 500;
+   font-size: 1.6rem;
+   line-height: 19px;
+   text-decoration: none;
+   padding: 38px 45px;
+
+ }
+
+ .activite {
+   margin-right: 10px;
+ }
+
+ .nav-header-links:hover {
+   color: var(--primary);
+   border-top: 2px solid #0065fc;
+ }
+
+
+ /* media queries pour les tablettes  */
+
+ @media screen and (max-width: 992px) {
+
+   /* Modification des marges pour les tablettes */
+   .header-logo {
+     margin-left: 22px;
+   }
+
+   .activite {
+     margin-right: 27px;
+   }
+
+ }
+
+
+
+ /* media queries pour les smartphone  */
+
+ @media screen and (max-width: 768px) {
+   /* Modification du Header */
+
+   .header-box {
+     width: 100%;
+     display: flex;
+     flex-direction: column;
+     height: 135px;
+   }
+
+   /* Modification du logo */
+
+   .header-logo {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+   }
+
+   .box-logo {
+     width: 63px;
+     height: 20px;
+     margin: 25px 0;
+   }
+
+   /* Modification de la barre de navigation. */
+
+   .header-nav {
+     text-align: center;
+     width: 100%;
+   }
+
+   .header-nav ul li {
+     width: 100%;
+     flex: auto;
+   }
+
+   /* Modification des liens de navigation. */
+   .nav-header-links {
+     display: inline-block;
+     width: 100%;
+     padding: 25px 0 15px 0;
+   }
+
+   .activite {
+     margin-right: 0;
+   }
+
+   .nav-header-links:hover {
+     border-top: none;
+     border-bottom: 2px solid #0065fc;
+   }
+ }
