@@ -85,7 +85,7 @@
  }
 
  /* Mise en place du padding du bloc main */
- main>* {
+ main > * {
    padding: 0 45px;
  }
 
